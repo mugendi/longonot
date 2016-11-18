@@ -20,11 +20,11 @@ var url = 'https://www.npmjs.com/browse/depended?offset={{page}}';
 
 var selectors = {
 
-  //using the quick "select" method with "text" argument
-  'name' : function(){ return longonot.select('.package-widget a.name','text'); },
+  //using the quick "select" method with "text" argument. Always pass the cheerio reference '$' with any select queries
+  'name' : function($){ return longonot.select($, '.package-widget a.name','text'); },
   //"text" argument is the default. Other values include "number" & "html"
   //any other value other than text, number and html is treated as an attribute and the attribute is returned instead
-  'version' : function(){ return longonot.select('.package-widget a.version'); },
+  'version' : function($){ return longonot.select($, '.package-widget a.version'); },
   //alternatively, we can us the cheerio object passed to function to customize data selectors
   'description' : function($){
     //start with empty array
