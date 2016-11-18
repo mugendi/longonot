@@ -1,6 +1,6 @@
 {
   "name": "longonot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Easy web scraper for structured data with ability to output to zipped csv file.",
   "main": "lib/scrape.js",
   "scripts": {

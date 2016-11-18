@@ -1,15 +1,15 @@
 # longonot
-Easy web scraper for structured data with ability to output to zipped csv file. 
+Easy web scraper for structured data with ability to output to zipped csv file.
 
 Longonot is never meant to be (and will never be) a full fledged scraper. In fact, Longonot will perform rather badly with poorly structured data/html.
 
 Longonot is created purposely to quickly scrape data from HTML pages where such data follows a given structure e.g. tables, lists e.t.c
 
-## Start 
+## Start
 
-```npm install --save longonot``` 
+```npm install --save longonot```
 
-### Some Code 
+### Some Code
 
 ```javascript
 
@@ -23,6 +23,7 @@ var selectors = {
   //using the quick "select" method with "text" argument
   'name' : function(){ return longonot.select('.package-widget a.name','text'); },
   //"text" argument is the default. Other values include "number" & "html"
+  //any other value other than text,number and html is treated as an attribute and the attribute is returned instead
   'version' : function(){ return longonot.select('.package-widget a.version'); },
   //alternatively, we can us the cheerio object passed to function to customize data selectors
   'description' : function($){
